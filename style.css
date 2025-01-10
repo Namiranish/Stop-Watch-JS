@@ -1,33 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 /* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: #ffb7d5;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #fff;
+    color: #ffffff;
     flex-direction: column;
 }
 
 /* Main Container */
 .container {
-    background: rgba(0, 0, 0, 0.6);
+    background: white;
+    border: 2px solid rgba(255, 183, 213, 0.5);
     border-radius: 20px;
     padding: 30px;
     text-align: center;
     max-width: 600px;
     width: 100%;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     animation: fadeIn 0.8s ease-in-out;
+    backdrop-filter: blur(10px);
 }
 
 #time {
@@ -38,11 +40,12 @@ body {
     font-weight: bold;
     gap: 5px;
     margin-bottom: 25px;
-    color: #f9d342;
+    color: #ffb7d5;
 }
 
 #time p {
     margin: 0;
+    color: #cf6692;;
 }
 
 .buttons {
@@ -53,24 +56,27 @@ body {
 }
 
 button {
-    background: #f9d342;
+    background:#ff85a2;
     border: none;
-    color: #000;
+    color: #fff;
     font-size: 1rem;
     font-weight: 500;
     padding: 12px 25px;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
-    background: #fff;
-    transform: scale(1.1);
+    background: #f92672;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 button:active {
-    transform: scale(1);
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 #record {
@@ -85,7 +91,8 @@ button:active {
     max-width: 600px;
     width: 100%;
     height: 300px; /* Fixed height for the laps container */
-    background: rgba(0, 0, 0, 0.5);
+    background:white;
+    border: 2px solid rgba(239, 110, 164, 0.5);
     border-radius: 20px;
     padding: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -93,6 +100,7 @@ button:active {
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
+    backdrop-filter: blur(10px);
 }
 
 .history {
@@ -100,13 +108,13 @@ button:active {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    color: #f9d342;
+    color: #cf6692;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
 #laps {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(255, 183, 213, 0.8);
     padding: 15px;
     border-radius: 10px;
     max-height: calc(100% - 50px); /* Adjust to fit inside container */
@@ -121,29 +129,29 @@ button:active {
 }
 
 #laps::-webkit-scrollbar-thumb {
-    background: #f9d342;
+    background: #f92672;
     border-radius: 5px;
 }
 
 #laps::-webkit-scrollbar-thumb:hover {
-    background: #fff;
+    background: #ff85a2;
 }
 
 #laps li {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(249, 38, 114, 0.2);
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
     text-align: center;
     font-size: 1rem;
     font-weight: 500;
-    color: #fff;
+    color: #ffffff;
 }
 
 #clear {
     background: transparent;
-    border: 2px solid #f9d342;
-    color: #f9d342;
+    border: 2px solid #cf6692;
+    color: #cf6692;
     padding: 8px 15px;
     border-radius: 5px;
     font-size: 1rem;
@@ -152,8 +160,8 @@ button:active {
 }
 
 #clear:hover {
-    background: #f9d342;
-    color: #000;
+    background: #b45283;
+    color: white;
 }
 
 /* Fade-in Animation */
